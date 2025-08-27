@@ -2,6 +2,12 @@
 
 A personal knowledge base and development assistant designed to centralize reference guides for various languages and frameworks. This project aims to streamline development workflows by integrating with AI chat services to provide contextual answers and code suggestions.
 
+> **Note::** This is a personal project for now and represents my reference pages.
+> As I continue to learn the art of programmning and software engineering I have found
+> asking questions to and getting suggestions from AI with proper context not only
+> allows for better code comprehension but also helps with knowing where to look for 
+> error 
+
 ## Roadmap
 
 The following features are planned for future releases:
