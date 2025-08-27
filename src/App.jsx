@@ -1,17 +1,28 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Refpage from './pages/Refpage';
+import Chatpage from './pages/Chatpage';
+import PythonPage from './pages/PythonPage';
+import JavascriptPage from './pages/JavascriptPage';
+import ReactPage from './pages/ReactPage';
+import CplusplusPage from './pages/CplusplusPage';
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="text-3xl font-bold underline">Hello World!</h1>
-      <button className="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center">
-        Button
-      </button>
-      <p>This application will become a mix of quickref.me, common task guides, and a perplexity spaces chat section</p>
+      <Routes>
+        {/* Add comments for expandability */}
+        <Route path="/" element={<Refpage />} />
+        <Route path="/chat" element={<Chatpage />} />
+        <Route path="/python" element={<PythonPage />} />
+        <Route path="/javascript" element={<JavascriptPage />} />
+        <Route path="/react" element={<ReactPage />} />
+        <Route path="/c++" element={<CplusplusPage />} />
+      </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
