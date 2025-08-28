@@ -33,6 +33,13 @@ const Refpage = () => {
           </div>
         </Link>
 
+        {/* Card for Terraform */}
+        <Link to="/terraform" className="card bg-info text-info-content">
+          <div className="card-body">
+            <h2 className="card-title">Terraform</h2>
+          </div>
+        </Link>
+
         {/*
           To add more cards, copy one of the Link blocks above and change the following:
           - `to="/..."`: The URL path for the new page. Make sure this matches a route in App.jsx.
