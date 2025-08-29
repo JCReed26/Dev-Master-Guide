@@ -69,59 +69,59 @@ provider "google" {
                         {/* Cloud Run Service */}
                         <h3 className="font-bold mt-2">Google Cloud Run Service</h3>
                         <pre className="bg-base-300 p-4 rounded">
-                            {`resource "google_cloud_run_service" "service" {
-                            name     = "example-service"
-                            location = "us-central1"
+{`resource "google_cloud_run_service" "service" {
+    name     = "example-service"
+    location = "us-central1"
 
-                            template {
-                                spec {
-                                containers {
-                                    image = "gcr.io/my-project/my-app:latest"
-                                    ports {
-                                    container_port = 8080
-                                    }
-                                }
-                                }
-                            }
+    template {
+        spec {
+            containers {
+                image = "gcr.io/my-project/my-app:latest"
+                ports {
+                    container_port = 8080
+                }
+            }
+        }
+    }
 
-                            traffics {
-                                percent         = 100
-                                latest_revision = true
-                            }
-                            }`}
+    traffics {
+        percent         = 100
+        latest_revision = true
+    }
+}`}
                         </pre>
 
                         {/* Storage Bucket */}
                         <h3 className="font-bold mt-4">Google Cloud Storage Bucket</h3>
                         <pre className="bg-base-300 p-4 rounded">
-                            {`resource "google_storage_bucket" "bucket" {
-                            name          = "my-example-bucket"
-                            location      = "US"
-                            force_destroy = true
-                            }`}
+{`resource "google_storage_bucket" "bucket" {
+    name          = "my-example-bucket"
+    location      = "US"
+    force_destroy = true
+}`}
                         </pre>
 
                         {/* VPC Network */}
                         <h3 className="font-bold mt-4">Google VPC Network</h3>
                         <pre className="bg-base-300 p-4 rounded">
-                            {`resource "google_compute_network" "vpc_network" {
-                            name                    = "example-vpc"
-                            auto_create_subnetworks = false
-                            }`}
+{`resource "google_compute_network" "vpc_network" {
+    name                    = "example-vpc"
+    auto_create_subnetworks = false
+}`}
                         </pre>
 
                         {/* Cloud SQL */}
                         <h3 className="font-bold mt-4">Google Cloud SQL (Postgres)</h3>
                         <pre className="bg-base-300 p-4 rounded">
-                            {`resource "google_sql_database_instance" "db" {
-                            name             = "example-db"
-                            database_version = "POSTGRES_14"
-                            region           = "us-central1"
-                        
-                            settings {
-                                tier = "db-f1-micro"
-                            }
-                            }`}
+{`resource "google_sql_database_instance" "db" {
+    name             = "example-db"
+    database_version = "POSTGRES_14"
+    region           = "us-central1"
+
+    settings {
+        tier = "db-f1-micro"
+    }
+}`}
                         </pre>
                     </div>
                 </div>
