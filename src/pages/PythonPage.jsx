@@ -44,7 +44,16 @@ const PythonPage = () => {
 s[0] -> 'H'
 s[-1] -> 'o'
 s[1:4] -> 'ell'` },
-    { name: 'Methods', content: `.upper(), .lower(), .capitalize(), .strip(), .split(), .join(), .replace(), .find(), .startswith(), .endswith()` },
+    { name: 'upper()', content: 'Returns a copy of the string with all characters in uppercase.\n\nExample:\n\'hello\'.upper() -> \'HELLO\'' },
+    { name: 'lower()', content: 'Returns a copy of the string with all characters in lowercase.\n\nExample:\n\'HELLO\'.lower() -> \'hello\'' },
+    { name: 'capitalize()', content: 'Returns a copy of the string with the first character capitalized and the rest lowercase.\n\nExample:\n\'hello world\'.capitalize() -> \'Hello world\'' },
+    { name: 'strip()', content: 'Returns a copy of the string with leading and trailing whitespace removed.\n\nExample:\n\'  hello  \'.strip() -> \'hello\'' },
+    { name: 'split()', content: 'Returns a list of words in the string, using a delimiter as the separator.\n\nExample:\n\'hello world\'.split(\' \') -> [\'hello\', \'world\']' },
+    { name: 'join()', content: 'Joins the elements of an iterable to the end of the string.\n\nExample:\n\'-\'.join([\'a\', \'b\', \'c\']) -> \'a-b-c\'' },
+    { name: 'replace()', content: 'Returns a string where a specified value is replaced with a specified value.\n\nExample:\n\'hello world\'.replace(\'world\', \'Python\') -> \'hello Python\'' },
+    { name: 'find()', content: 'Searches the string for a specified value and returns the position of where it was found.\n\nExample:\n\'hello world\'.find(\'world\') -> 6' },
+    { name: 'startswith()', content: 'Returns true if the string starts with the specified value.\n\nExample:\n\'hello world\'.startswith(\'hello\') -> True' },
+    { name: 'endswith()', content: 'Returns true if the string ends with the specified value.\n\nExample:\n\'hello world\'.endswith(\'world\') -> True' },
     { name: 'Formatting', content: `name = "World"
 f"Hello, {name}" -> "Hello, World"
 "Hello, {}".format(name) -> "Hello, World"` },
@@ -54,7 +63,16 @@ f"Hello, {name}" -> "Hello, World"
     { name: 'Creation', content: `[]
 [1, "hello", 3.14]
 list(range(5)) -> [0, 1, 2, 3, 4]` },
-    { name: 'Methods', content: `.append(x), .extend(iterable), .insert(i, x), .remove(x), .pop(i), .sort(), .reverse(), .copy(), .count(x), .index(x)` },
+    { name: 'append()', content: 'Adds an element to the end of the list.\n\nExample:\nmy_list = [1, 2]\nmy_list.append(3) -> [1, 2, 3]' },
+    { name: 'extend()', content: 'Adds all elements of an iterable to the end of the list.\n\nExample:\nmy_list = [1, 2]\nmy_list.extend([3, 4]) -> [1, 2, 3, 4]' },
+    { name: 'insert()', content: 'Inserts an element at a specific position.\n\nExample:\nmy_list = [1, 2]\nmy_list.insert(1, 3) -> [1, 3, 2]' },
+    { name: 'remove()', content: 'Removes the first occurrence of an element.\n\nExample:\nmy_list = [1, 2, 3, 2]\nmy_list.remove(2) -> [1, 3, 2]' },
+    { name: 'pop()', content: 'Removes and returns the element at a specific position (or the last element if no index is specified).\n\nExample:\nmy_list = [1, 2, 3]\nmy_list.pop(1) -> 2\nmy_list -> [1, 3]' },
+    { name: 'sort()', content: 'Sorts the list in ascending order.\n\nExample:\nmy_list = [3, 1, 2]\nmy_list.sort() -> [1, 2, 3]' },
+    { name: 'reverse()', content: 'Reverses the order of the elements in the list.\n\nExample:\nmy_list = [1, 2, 3]\nmy_list.reverse() -> [3, 2, 1]' },
+    { name: 'copy()', content: 'Returns a shallow copy of the list.\n\nExample:\nmy_list = [1, 2]\nnew_list = my_list.copy() -> [1, 2]' },
+    { name: 'count()', content: 'Returns the number of times an element appears in the list.\n\nExample:\nmy_list = [1, 2, 2]\nmy_list.count(2) -> 2' },
+    { name: 'index()', content: 'Returns the index of the first occurrence of an element.\n\nExample:\nmy_list = [1, 2, 3]\nmy_list.index(2) -> 1' },
     { name: 'Comprehensions', content: `squares = [x**2 for x in range(10)]
 even_numbers = [x for x in range(10) if x % 2 == 0]` },
     { name: 'Use Cases', content: `Storing collections of items.
@@ -75,7 +93,12 @@ Returning multiple values from a function.` },
     { name: 'Creation', content: `{}
 {'key': 'value', 'name': 'John'}
 dict(key='value', name='John')` },
-    { name: 'Methods', content: `.keys(), .values(), .items(), .get(key, default), .pop(key), .update(other_dict)` },
+    { name: 'keys()', content: 'Returns a view object displaying a list of all the keys in the dictionary.\n\nExample:\nmy_dict = {\'a\': 1, \'b\': 2}\nmy_dict.keys() -> dict_keys([\'a\', \'b\'])' },
+    { name: 'values()', content: 'Returns a view object displaying a list of all the values in the dictionary.\n\nExample:\nmy_dict = {\'a\': 1, \'b\': 2}\nmy_dict.values() -> dict_values([1, 2])' },
+    { name: 'items()', content: 'Returns a view object displaying a list of key-value tuple pairs.\n\nExample:\nmy_dict = {\'a\': 1, \'b\': 2}\nmy_dict.items() -> dict_items([(\'a\', 1), (\'b\', 2)])' },
+    { name: 'get()', content: 'Returns the value of the specified key. If the key does not exist, it returns a default value.\n\nExample:\nmy_dict = {\'a\': 1, \'b\': 2}\nmy_dict.get(\'a\', 0) -> 1\nmy_dict.get(\'c\', 0) -> 0' },
+    { name: 'pop()', content: 'Removes the element with the specified key.\n\nExample:\nmy_dict = {\'a\': 1, \'b\': 2}\nmy_dict.pop(\'a\') -> 1\nmy_dict -> {\'b\': 2}' },
+    { name: 'update()', content: 'Updates the dictionary with the specified key-value pairs.\n\nExample:\nmy_dict = {\'a\': 1}\nmy_dict.update({\'b\': 2}) -> {\'a\': 1, \'b\': 2}' },
     { name: 'Comprehensions', content: `squares = {x: x**2 for x in range(5)}` },
     { name: 'Use Cases', content: `Key-value storage.
 Fast lookups.
@@ -84,7 +107,14 @@ Representing JSON data.` },
   
   const setData = [
     { name: 'Creation', content: `set(), {1, 2, 3, 3} -> {1, 2, 3}` },
-    { name: 'Methods', content: `.add(x), .remove(x), .discard(x), .pop(), .clear(), .union(other), .intersection(other), .difference(other)` },
+    { name: 'add()', content: 'Adds an element to the set.\n\nExample:\nmy_set = {1, 2}\nmy_set.add(3) -> {1, 2, 3}' },
+    { name: 'remove()', content: 'Removes the specified element. Raises a KeyError if the element is not found.\n\nExample:\nmy_set = {1, 2, 3}\nmy_set.remove(2) -> {1, 3}' },
+    { name: 'discard()', content: 'Removes the specified element. Does not raise an error if the element is not found.\n\nExample:\nmy_set = {1, 2, 3}\nmy_set.discard(4) -> {1, 2, 3}' },
+    { name: 'pop()', content: 'Removes and returns an arbitrary element from the set.\n\nExample:\nmy_set = {1, 2, 3}\nmy_set.pop() -> (returns 1, 2, or 3)' },
+    { name: 'clear()', content: 'Removes all elements from the set.\n\nExample:\nmy_set = {1, 2}\nmy_set.clear() -> set()' },
+    { name: 'union()', content: 'Returns a new set containing the union of sets.\n\nExample:\nset1 = {1, 2}\nset2 = {2, 3}\nset1.union(set2) -> {1, 2, 3}' },
+    { name: 'intersection()', content: 'Returns a new set containing the intersection of sets.\n\nExample:\nset1 = {1, 2}\nset2 = {2, 3}\nset1.intersection(set2) -> {2}' },
+    { name: 'difference()', content: 'Returns a new set containing the difference between two or more sets.\n\nExample:\nset1 = {1, 2}\nset2 = {2, 3}\nset1.difference(set2) -> {1}' },
     { name: 'Use Cases', content: `Storing unique items.
 Membership testing.
 Set operations (union, intersection, difference).` },
